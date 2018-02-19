@@ -1,0 +1,1486 @@
+
+<!DOCTYPE html>
+<html>
+
+        <head>
+
+            <!-- changed to internal
+            <link rel="stylesheet" type="text/css" href="tbcss.css">
+            -->
+            <style>
+
+                         #header {
+        
+                        padding: 50px;
+                        background-color: gray;
+                     
+                        }
+
+
+                        #leftSide {
+                            
+                        float: left;
+                        width: 25;
+                        
+                        }   
+
+                        #flags {
+                        
+                            width: 75%;
+                            float: right;
+                            
+                        }  
+
+                        #centerPage {
+                        
+                            width: 75%;
+                            float: right;
+                            
+                        }
+
+                      
+
+                        .footer {
+                        
+                          position: fixed;
+                          right: 0;
+                          bottom: 0;
+                          left: 0;
+                          font-size: 7px;
+                          text-align: center;
+                        }
+
+
+
+                        input[type=button] {
+
+                            font-style: italic;
+                            font-weight: bold;  
+
+                        }
+                        .segments {
+
+                            background-color: hotpink; 
+                            color: black;
+                       
+
+                            }
+                            /*  LANGUAGE BUTTONS: */
+                         /* Languages: EN IE ES NO PL PT FI SV DK-->
+                        <!-- Languages: DE ISL GRE FR ITA CZE SRB TKY-->      */
+                        .ENG  {
+
+                            background-color: cornsilk; 
+                            color: red;
+                            width: 60px;
+                            height: 30px;    
+
+                            }
+                        .IEN  {
+
+                            background-color: red; 
+                            color: blue;
+                            width: 60px;
+                            height: 30px;
+
+                            }    
+                        .ESP  {
+
+                            background-color: red; 
+                            color: yellow;
+                            width: 60px;
+                            height: 30px;
+
+                            }     
+                        .NOR {
+
+                            background-color: red; 
+                            color: blue;
+                            width: 60px;
+                            height: 30px;
+
+                            }
+                        .POL {
+
+                            background-color: white; 
+                            color: red;
+                            width: 60px;
+                            height: 30px;
+
+                            }    
+                        .POR {
+
+                            background-color: green; 
+                            color: red;
+                            width: 60px;
+                            height: 30px;
+
+                            }       
+                         /* Languages: EN IE ES NO PL PT FI SV DK-->
+                        <!-- Languages: DE ISL GRE FR ITA CZE SRB TKY-->      *     */  
+                    
+                        .FIN  {
+
+                            background-color: blue; 
+                            color: white;
+                            width: 60px;
+                            height: 30px;    
+
+                            }
+                        .SWE  {
+
+                            background-color: yellow; 
+                            color: blue;
+                            width: 60px;
+                            height: 30px;
+
+                            }    
+                        .DEN  {
+
+                            background-color: red; 
+                            color: white;
+                            width: 60px;
+                            height: 30px;
+
+                            }     
+                        .GER {
+
+                            background-color: black; 
+                            color: red;
+                            width: 60px;
+                            height: 30px;
+
+                            }
+                        .ISL {
+
+                            background-color: blue; 
+                            color: red;
+                            width: 60px;
+                            height: 30px;
+
+                            }    
+                        .GRE {
+
+                            background-color: mintcream; 
+                            color: blue;
+                            width: 60px;
+                            height: 30px;
+
+                            }    
+                       .FRA  {
+
+                            background-color: blue; 
+                            color: white;
+                            width: 60px;
+                            height: 30px;    
+
+                            }
+                        .ITA  {
+
+                            background-color: red; 
+                            color: green;
+                            width: 60px;
+                            height: 30px;
+
+                            }    
+                        .CZE  {
+
+                            background-color: red; 
+                            color: white;
+                            width: 60px;
+                            height: 30px;
+
+                            }     
+                        .SRB {
+
+                            background-color: red; 
+                            color: blue;
+                            width: 60px;
+                            height: 30px;
+
+                            }
+                        .TUR {
+
+                            background-color: red; 
+                            color: white;
+                            width: 60px;
+                            height: 30px;
+
+                            }   
+                
+                        .POL {
+
+                            background-color: red; 
+                            color: white;
+                            width: 60px;
+                            height: 30px;
+
+                            }        
+                
+
+                        .newLanguages {
+
+                            background-color: red;
+                        }                            
+
+                        .sReady {
+
+                            background-color: green;
+                        }
+                
+                        .sNotReady {
+
+                            background-color: hotpink;
+                        }
+                
+                        .sNotNeeded {
+
+                            background-color: darkgrey;
+                        }                
+                        
+                        #separator {
+
+                            background-color: green;
+
+                        }
+/*
+                        .controls1 {
+
+                            background-color: yellow; 
+                            color: black;
+
+
+                            }    
+                        .controls2 {
+
+                            background-color: green; 
+                            color: black;
+
+
+                            }     
+                        .loginz {
+
+                            background-color: gray; 
+                            color: black;
+
+
+                            }  
+                           */ 
+                       
+                        
+
+
+            </style>
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        </head>
+
+    <body> <!-- Body starts ---------------------------------------------- -->
+
+        <div id="header">    <!-- HEADER STARTS-->
+
+            <p>
+            Project name:
+            <input type="text" name="projectsName" id="projectsName" size="135"/>    
+            </p>
+            
+            <p>
+            Campaigns start date and time (CET): 
+            <input type="text" name="startDate" id="startDate" size="35"/>
+            </p>
+            
+            <p>
+            Campaigns end date and time (CET):
+            <input type="text" name="endDate" id="endDate" size="35"/>
+            </p>
+                        <!-- Languages: EN IE ES NO PL PT FI SV DK-->
+                        <!-- Languages: DE ISL GRE FR ITA CZE SRB TKY-->
+            <p>            
+            Select languages:
+                <form action="">
+
+                    <input type="radio" name="rENG" value="ENG"> ENG
+                    <input type="radio" name="rIEN" value="IEN"> IEN
+                    <input type="radio" name="rESP" value="ESP"> ESP
+                    <input type="radio" name="rNOR" value="NOR"> NOR
+                    <input type="radio" name="rPOL" value="POL"> POL
+                    <input type="radio" name="rPOR" value="POR"> POR
+                    <input type="radio" name="rFIN" value="FIN"> FIN
+                    <input type="radio" name="rSWE" value="SWE"> SWE
+                    <input type="radio" name="rDEN" value="DEN"> DEN
+                    <input type="radio" name="rGER" value="GER"> GER
+                    <input type="radio" name="rISL" value="ISL"> ISL
+                    <input type="radio" name="rGRE" value="GRE"> GRE
+                    <input type="radio" name="rFRA" value="FRA"> FRA
+                    <input type="radio" name="rITA" value="ITA"> ITA
+                    <input type="radio" name="rCZE" value="CZE"> CZE
+                    <input type="radio" name="rSRB" value="SRB"> SRB
+                    <input type="radio" name="rTUR" value="TUR"> TUR <br>
+                    <input class= "langSel" type="button" value="Click this when languages are selected" id="langSel"></input>
+                    <input class= "newLanguages" type="button" value="Clear selected languages" id="clearLang"></input>
+               
+                </form>
+
+            </p>
+
+        </div>          <!-- HEADER ENDS-->
+
+        <div id="leftSide">    <!-- Left side STARTS-->
+
+    <input class= "segments" type="button" value="Landing page" id="Landingpage"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyLP"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyLP"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededLP"></input>
+            <br><br>
+    <input class= "segments" type="button" value="Title and meta" id="Titleandmeta"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyTM"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyTM"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededTM"></input>
+            <br><br>
+    <input class= "segments" type="button" value="Terms and Conds" id="TermsandConds"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyTC"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyTC"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededTC"></input>
+            <br><br>
+    <input class= "segments" type="button" value="Email" id="Emails"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyEM"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyEM"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededEM"></input>
+    <!--         <br><br>
+    <input class= "segments" type="button" value="Email 2" id="Email 2"></input>
+    <span id="e2Status" class="statuses"></span>
+            <br><br>
+    <input class= "segments" type="button" value="Email 3" id="Email 3"></input> 
+    <span id="e3Status" class="statuses"></span>
+            <br><br>            
+    <input class= "segments" type="button" value="Email 4" id="Email 4"></input> 
+    <span id="e4Status" class="statuses"></span>
+     -->       <br><br> 
+    <input class= "segments" type="button" value="OMS" id="OMS"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyOM"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyOM"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededOM"></input>
+     <!--       <br><br>
+    <input class= "segments" type="button" value="OMS 2" id="OMS 2"></input>  
+    <span id="o2Status" class="statuses"></span>
+            <br><br>
+    <input class= "segments" type="button" value="OMS 3" id="OMS 3"></input>  
+    <span id="o3Status" class="statuses"></span>
+            <br><br>
+    <input class= "segments" type="button" value="OMS 4" id="OMS 4"></input>  
+    <span id="o4Status" class="statuses"></span> -->
+            <br><br>
+    <input class= "segments" type="button" value="Main banner" id="Mainbanner"></input>
+    <input class= "sReady" type="button" value=" < " id="sReadyMB"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyMB"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededMB"></input>
+            <br><br>
+    <input class= "segments" type="button" value="Promotions page" id="Promotionspage"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyPP"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyPP"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededPP"></input>
+            <br><br>
+    <input class= "segments" type="button" value="Campaign tool" id="Campaigntool"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyCT"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyCT"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededCT"></input>
+            <br><br>
+    <input class= "segments" type="button" value="Wikisson" id="Wikisson"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyWI"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyWI"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededWI"></input>
+            <br><br>         
+    <input class= "segments" type="button" value="Brief" id="Brief"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyBR"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyBR"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededBR"></input>
+            <br><br>
+    <input class= "segments" type="button" value="Notes and links" id="notes"></input> 
+    <input class= "sReady" type="button" value=" < " id="sReadyNO"></input>
+    <input class= "sNotReady" type="button" value=" < " id="sNotReadyNO"></input>
+    <input class= "sNotNeeded" type="button" value=" < " id="sNotNeededNO"></input>  
+            <br><br>     Useful links:<br><br>
+    <a href="http://clemensjanes.com/tools/listGenerator/" target="_blank">T&C List Generator</a> <br><br>
+	<a href="https://www.tablesgenerator.com/html_tables" target="_blank">Table generator</a> <br><br>
+	<a href="https://www.diffchecker.com/" target="_blank">Difference checker</a> <br><br>
+	<a href="https://pastebin.com" target="_blank">Paste bin</a> <br><br>
+	<a href="https://echochecker.herokuapp.com/" target="_blank">ECHO link scraper</a> <br><br>
+	
+				<br><br>
+			To import campaign: <br>
+			1. same selected languages required.<br>
+			2. copy campaign text to field below <br>
+			3. click Import Campaign- button below. <br><br>
+			
+			To "save" campaign for later use: <br>
+			1. copy text on field below <br>
+			2. save it with notepad to your computer. <br><br>
+			</input><input class= "importCampaign" type="button" value="Import Campaign" id="importCampaign"></input>
+            <br><br>
+			<textarea id="textAlue2" rows="10" cols="20">
+ 
+            </textarea>		
+	
+        </div>              <!-- Left side ENDS-->
+
+        <div id="flags">  <!--     FLAGS -->
+            
+            <span id="ENG1">
+            <input class= "ENG" type="button" value="EN" id="ENG"></input>
+            </span>
+            <span id="IEN1">
+            <input class= "IEN" type="button" value="IE" id="IEN"></input>
+            </span>
+            <span id="ESP1">
+            <input class= "ESP" type="button" value="ES" id="ESP"></input>
+            </span>
+            <span id="NOR1">
+            <input class= "NOR" type="button" value="NO" id="NOR"></input>
+            </span>
+            <span id="POL1">
+            <input class= "POL" type="button" value="PL" id="POL"></input>
+            </span>
+            <span id="POR1">
+            <input class= "POR" type="button" value="PT" id="POR"></input>
+            </span>
+            <span id="FIN1">
+            <input class= "FIN" type="button" value="FI" id="FIN"></input>
+            </span>
+            <span id="SWE1">
+            <input class= "SWE" type="button" value="SV" id="SWE"></input>
+            </span>
+            <span id="DEN1">
+            <input class= "DEN" type="button" value="DK" id="DEN"></input>
+            </span>
+            <span id="GER1">
+            <input class= "GER" type="button" value="DE" id="GER"></input>
+            </span>
+            <span id="ISL1">
+            <input class= "ISL" type="button" value="IS" id="ISL"></input>
+            </span>
+            <span id="GRE1">
+            <input class= "GRE" type="button" value="GR" id="GRE"></input>
+            </span>
+            <span id="FRA1">
+            <input class= "FRA" type="button" value="FR" id="FRA"></input>
+            </span>
+            <span id="ITA1">
+            <input class= "ITA" type="button" value="IT" id="ITA"></input>
+            </span>
+            <span id="CZE1">
+            <input class= "CZE" type="button" value="CZ" id="CZE"></input>
+            </span>
+            <span id="SRB1">
+            <input class= "SRB" type="button" value="SR" id="SRB"></input>
+            </span>
+            <span id="TUR1">
+            <input class= "TUR" type="button" value="TK" id="TUR"></input>
+            </span>
+            <br>
+        </div>              <!-- FLAGS END -->
+		<div id="invis">
+			
+			<span id="ct1"></span>  <!-- These are "holders" of copypaste info -->
+			<span id="ct2"></span>
+			<span id="ct3"></span>
+            <span id="ct4"></span>
+			
+			<span id="cts1"></span>
+			<span id="cts2"></span>
+			
+			<span id="ctn1"></span>
+			<span id="ctn2"></span>
+			
+			<span id="ctv1"></span>
+			<span id="ctv2"></span>
+			
+			<span id="ctd1"></span>
+			<span id="ctd2"></span>
+			
+		</div>
+
+        <div id="centerPage"> <!-- CENTER PAGE STARTS-->
+            
+            <h4 id="whatActive"></h4><span id="msg"></span> <br><br>
+            
+            <!--  autosave added, so should not be needed anymore
+            <input class= "saveButton" type="button" value="Save content" id="saveButton"></input>
+			-->
+            
+            Click to copy symbol:
+            <input class= "copyBold1" type="button" value="<b>" id="copyBold1"></input>
+            <input class= "copyBold2" type="button" value="</b>" id="copyBold2"></input>
+			<input class= "copyLine" type="button" value="<br>" id="copyLine"></input>
+            <input class= "copySplitter" type="button" value="xSPLITx" id="copySplitter"></input>
+            
+            <input class= "separator" type="button" value="Categorize a pasted copy file after setting split points" id="separator"></input>
+           <br>
+		    Click to copy link: 
+			<input class= "copysul" type="button" value="SU gamelink" id="copysul"></input>
+			<input class= "copysug" type="button" value="SU lobby" id="copysug"></input>
+			<input class= "copynal" type="button" value="NA gamelink" id="copynal"></input>
+			<input class= "copynag" type="button" value="NA lobby" id="copynag"></input>
+			<input class= "copysal" type="button" value="SA gamelink" id="copysal"></input>
+			<input class= "copysag" type="button" value="SA lobby" id="copysag"></input>
+			<input class= "copydkl" type="button" value="DK gamelink" id="copydkl"></input>
+			<input class= "copydkg" type="button" value="DK lobby" id="copydkg"></input>
+			<br>
+            <!-- Languages: EN IE ES NO PL PT FI SV DK-->
+            <!-- Languages: DE ISL GRE FR ITA CZE SRB TKY-->
+            
+            <textarea id="textAlue" rows="50" cols="150">
+ 
+            </textarea>
+	
+
+        </div>              <!-- CENTER PAGE ENDS-->		
+		
+        <div class="footer">    <!-- FOOTER STARTS-->
+            
+            tool made by amorcitos 2017
+        
+        </div>                          <!-- FOOTER ENDS-->
+            <!-- changed to internal
+            <script src="tbjs.js"></script>
+            -->
+
+            <script>
+            // Script starts!-----------------------------------------
+
+                var textAlue1 = document.getElementById("textAlue");
+				var textAlue2 = document.getElementById("textAlue2");
+
+                var lpSta = document.getElementById("lpStatus");
+                var tiMeSta = document.getElementById("tiMeStatus");
+                var tAndCSta = document.getElementById("tAndCstatus");
+                var esSta = document.getElementById("esStatus");
+              /*  var e2Sta = document.getElementById("e2Status");
+                var e3Sta = document.getElementById("e3Status");
+                var e4Sta = document.getElementById("e4Status"); */
+                var osSta = document.getElementById("osStatus");
+            /*    var o2Sta = document.getElementById("o2Status");
+                var o3Sta = document.getElementById("o3Status");
+                var o4Sta = document.getElementById("o4Status"); */ 
+                var mbSta = document.getElementById("mbStatus");
+                var prSta = document.getElementById("prStatus");
+                var ctSta = document.getElementById("ctStatus");
+                var brSta = document.getElementById("briefStatus");
+                var wikiSta = document.getElementById("wikiStatus");
+                var wikiSta = document.getElementById("notesStatus");
+                var whatAct = document.getElementById("whatActive");
+
+                var classStatut = document.getElementsByClassName('statuses');
+
+                // VARIABLES TO STORE DATAS, GLOBALS
+
+                var landingPage = [];
+                var titleAndMeta = [];
+                var termsAndConds = [];
+                var emails = [];
+                var oms = [];
+                var mainBanner = [];
+                var promotionsPage = [];
+                var campaignTool = [];
+                var wikisson = [];
+                var campaignBrief = [];
+                var notesAndLinks = [];
+
+                var activatedLanguages = [];
+                var activeBank = [];
+                var activeSlot = 0;
+
+
+                // -------------------------- FUNCTIONS ------------------------
+				
+				function prepareExport() {  // prepare export 
+					
+					console.log("prepareExport activated");
+					
+					let allDetails = [   // collect all data
+					
+					landingPage,
+					titleAndMeta,
+					termsAndConds,
+					emails,
+					oms,
+					mainBanner,
+					promotionsPage,
+					campaignTool,
+					wikisson,
+					campaignBrief,
+					notesAndLinks
+					
+					];
+				
+					let detailsJson = JSON.stringify(allDetails);
+					
+					textAlue2.value = detailsJson;
+					
+				
+				}  // prepare export ends
+
+                function showTheFlags(){
+
+                            var i = 0;
+
+                            for (;i < activatedLanguages.length; i++) {
+                                
+                             $("#" + activatedLanguages[i] + 1).fadeIn("slow");    
+                                
+                            } // for
+
+                }  // show flags
+
+                function loadTexts(activeBankx, activeSlotx) {
+
+                            console.log("loadTexts aB/aS",activeBankx,activeSlotx);
+
+                            $("#saveButton").fadeIn("slow");
+                            $("#clearLang").fadeOut("slow");
+                            
+                            showTheFlags();
+
+                            textAlue1.value = activeBankx[activeSlotx]; 
+
+                } // load texts
+                
+                function hideLanguages() {
+
+                    $("#ENG1").hide();  // hide all flags.
+                    $("#IEN1").hide();
+                    $("#FIN1").hide();
+                    $("#ESP1").hide();
+                    $("#SWE1").hide();
+                    $("#GER1").hide();
+                    $("#SRB1").hide();
+                    $("#GRE1").hide();
+                    $("#GER1").hide();
+                    $("#ITA1").hide();
+                    $("#FRA1").hide();
+                    $("#NOR1").hide();
+                    $("#DEN1").hide();
+                    $("#ISL1").hide();
+                    $("#TUR1").hide();
+                    $("#CZE1").hide();
+                    $("#POR1").hide();
+                    $("#POL1").hide();     
+
+                    $("#textAlue").hide();
+                    $("#separator").hide();                                  
+                    
+                    }  // hide languages
+
+                function timeForAction(butID){   // ---------------- TIME FOR ACTION -----------------
+
+                    console.log("button clicked. id/",butID);
+
+                    if (butID != "langSel" &&    // autosave if not those buttons
+                        butID != "clearLang" &&
+                        butID != "saveButton" &&
+						butID != "importCampaign") {
+
+                        console.log("autosave initiated");
+
+                        timeForAction("saveButton");
+
+                    }
+					
+					if (butID != "importCampaign") {  // disable prepareE if importing
+					
+						prepareExport();
+
+					}
+					
+                    switch (butID) {  // to check what button it was and do the action
+
+                        case "langSel":
+
+                            activatedLanguages = []; // clear array
+
+                            var radios = [];
+                            var inputs = document.getElementsByTagName('input');
+                            var i = 0;
+
+                            for (; i < inputs.length; i++){ // for to check which are radios and add them to radios
+
+                                if (inputs[i].getAttribute('type')=='radio'){
+                                // your statements
+
+                                    radios.push(inputs[i]);
+
+                                } // if
+
+                            }  // for to check which are radios and add them to radios ends
+
+                            i = 0; // back to zero for next for
+
+                            for (;i < radios.length; i++) {  // to check which are checked and to add them to activatedLanguages
+
+                                if (radios[i].checked) {
+
+                                        activatedLanguages.push(radios[i].value);
+
+                                        landingPage.push(radios[i].value);
+                                        titleAndMeta.push(radios[i].value);
+                                        termsAndConds.push(radios[i].value);
+                                        emails.push(radios[i].value);
+                                        oms.push(radios[i].value);
+                                        mainBanner.push(radios[i].value);
+                                        promotionsPage.push(radios[i].value);
+                                        campaignTool.push(radios[i].value);
+                                        wikisson.push(radios[i].value);
+                                        campaignBrief.push(radios[i].value);
+                                        notesAndLinks.push(radios[i].value);                                        
+                                        activeBank.push(radios[i].value);
+                                }
+
+                            } // for of radio check
+
+                            console.log("languages selected:", activatedLanguages);
+
+                            if (activatedLanguages.length === 0) { // if no languages selected
+
+                                whatAct.textContent = "You need to select atleast one language to continue";
+
+                                setTimeout(function() { 
+                                
+                                whatAct.textContent = ""; 
+                                
+                                }, 2000); 
+
+                            } else {
+
+                                $("#leftSide").fadeIn("slow");  
+                                $("#langSel").fadeOut("slow");
+                                whatAct.textContent = "<--- start by clicking 'landing page'";
+
+                            }
+
+                        break;
+
+                        case "clearLang":
+
+                            var radios = [];
+                            var inputs = document.getElementsByTagName('input');
+                            activatedLanguages = [];
+                            var i = 0;
+
+                            for (; i < inputs.length; i++){ // for to check which are radios and add them to radios
+
+                                if (inputs[i].getAttribute('type')=='radio'){
+                                // your statements
+
+                                    radios.push(inputs[i]);
+
+                                } // if
+
+                            }  // for to check which are radios and add them to radios ends
+
+                            i = 0; // back to zero
+
+                            for (;i < radios.length; i++) {  // untick all radios
+
+                                radios[i].checked = false;
+
+                            }
+
+                            $("#langSel").fadeIn("slow");
+
+                        break;
+
+                        case "Landingpage":
+
+                            whatAct.textContent = butID;
+                            activeBank = landingPage;
+                            loadTexts(activeBank, activeSlot);
+                            $("#textAlue").fadeIn("slow");
+                            $("#separator").fadeIn("slow");
+
+                        break;    
+
+                        case "Titleandmeta":
+
+                            whatAct.textContent = butID;
+                            activeBank = titleAndMeta;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "TermsandConds":
+
+                            whatAct.textContent = butID;
+                            activeBank = termsAndConds;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "Emails":
+
+                            whatAct.textContent = butID;
+                            activeBank = emails;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;                            
+
+                        case "OMS":
+
+                            whatAct.textContent = butID;
+                            activeBank = oms;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "Mainbanner":
+
+                            whatAct.textContent = butID;
+                            activeBank = mainBanner;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "Promotionspage":
+
+                            whatAct.textContent = butID;
+                            activeBank = promotionsPage;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "Campaigntool":
+
+                            whatAct.textContent = butID;
+                            activeBank = campaignTool;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "Wikisson":
+
+                            whatAct.textContent = butID;
+                            activeBank = wikisson;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "Brief":
+
+                            whatAct.textContent = butID;
+                            activeBank = campaignBrief;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "notes":     
+
+                            whatAct.textContent = butID;
+                            activeBank = notesAndLinks;
+                            loadTexts(activeBank, activeSlot);
+
+                        break;
+
+                        case "ENG":                       
+                        case "IEN":                      
+                        case "ESP":                       
+                        case "NOR":                       
+                        case "POL":                       
+                        case "POR":                      
+                        case "FIN":                       
+                        case "SWE":                      
+                        case "DEN":                       
+                        case "GER":                       
+                        case "ISL":                        
+                        case "GRE":                        
+                        case "FRA":                       
+                        case "ITA":                      
+                        case "CZE":                       
+                        case "SRB":
+                        case "TUR":
+
+                        // check whats the slot
+
+                            var i = 0;
+
+                            for (;i < activatedLanguages.length; i++) {
+
+                                if (butID === activatedLanguages[i]) {
+
+                                    activeSlot = i;
+
+                                } // if
+
+                            } // for
+
+                            console.log("language selected. slot:",activeSlot);
+                            loadTexts(activeBank,activeSlot);    
+
+                        break;
+
+                        case "saveButton":
+
+                            switch (activeBank){
+
+                                case landingPage:
+
+                                    landingPage[activeSlot] = textAlue1.value;
+
+                                break;
+                                
+                                case titleAndMeta:
+
+                                    console.log("save:",titleAndMeta[activeSlot]);
+                                    titleAndMeta[activeSlot] = textAlue1.value;
+
+                                break;
+
+                                case termsAndConds:
+
+                                    termsAndConds[activeSlot] = textAlue1.value;
+                                
+                                break;
+
+                                case emails:
+
+                                    emails[activeSlot] = textAlue1.value;
+                 
+                                break;
+                 
+                                case oms: 
+
+                                    oms[activeSlot] = textAlue1.value;
+                 
+                                break;
+
+                                case mainBanner: 
+
+                                    mainBanner[activeSlot] = textAlue1.value;
+                 
+                                break;
+
+                                case promotionsPage: 
+
+                                    promotionsPage[activeSlot] = textAlue1.value;
+                 
+                                break;
+                 
+                                case campaignTool: 
+
+                                    campaignTool[activeSlot] = textAlue1.value;
+                 
+                                break;
+                 
+                                case wikisson: 
+
+                                    wikisson[activeSlot] = textAlue1.value;
+
+                                break;
+
+                                case campaignBrief: 
+
+                                    campaignBrief[activeSlot] = textAlue1.value;
+                                
+                                break;
+
+                                case notesAndLinks: 
+
+                                    notesAndLinks[activeSlot] = textAlue1.value;
+
+                                break;
+
+                            } // switch of activebank
+
+                        break;
+                            
+                        case "sReadyLP":
+                            
+                            Landingpage.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyLP":
+                            
+                            Landingpage.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededLP":
+                            
+                            Landingpage.style.backgroundColor = "darkgrey";
+                            
+                        break;
+                            
+                        case "sReadyTM":
+                            
+                            Titleandmeta.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyTM":
+                            
+                            Titleandmeta.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededTM":
+                            
+                            Titleandmeta.style.backgroundColor = "darkgrey";
+                            
+                        break;
+                            
+                        case "sReadyTC":
+                            
+                            TermsandConds.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyTC":
+                            
+                            TermsandConds.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededTC":
+                            
+                            TermsandConds.style.backgroundColor = "darkgrey";
+                            
+                        break;
+                            
+                        case "sReadyEM":
+                            
+                            Emails.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyEM":
+                            
+                            Emails.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededEM":
+                            
+                            Emails.style.backgroundColor = "darkgrey";
+                            
+                        break;
+
+                        case "sReadyOM":
+                            
+                            OMS.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyOM":
+                            
+                            OMS.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededOM":
+                            
+                            OMS.style.backgroundColor = "darkgrey";
+                            
+                        break;
+
+                        case "sReadyMB":
+                            
+                            Mainbanner.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyMB":
+                            
+                            Mainbanner.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededMB":
+                            
+                            Mainbanner.style.backgroundColor = "darkgrey";
+                            
+                        break;
+                            
+                        case "sReadyPP":
+                            
+                            Promotionspage.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyPP":
+                            
+                            Promotionspage.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededPP":
+                            
+                            Promotionspage.style.backgroundColor = "darkgrey";
+                            
+                        break;
+
+                        case "sReadyCT":
+                            
+                            Campaigntool.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyCT":
+                            
+                            Campaigntool.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededCT":
+                            
+                            Campaigntool.style.backgroundColor = "darkgrey";
+                            
+                        break;
+
+                        case "sReadyWI":
+                            
+                            Wikisson.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyWI":
+                            
+                            Wikisson.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededWI":
+                            
+                            Wikisson.style.backgroundColor = "darkgrey";
+                            
+                        break;
+
+                        case "sReadyBR":
+                            
+                            Brief.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyBR":
+                            
+                            Brief.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededBR":
+                            
+                            Brief.style.backgroundColor = "darkgrey";
+                            
+                        break;
+
+                        case "sReadyNO":
+                            
+                            notes.style.backgroundColor = "green";
+                            
+                        break;
+                            
+                        case "sNotReadyNO":
+                            
+                            notes.style.backgroundColor = "hotpink";
+                            
+                        break;
+                            
+                        case "sNotNeededNO":
+                            
+                            notes.style.backgroundColor = "darkgrey";
+                            
+                        break;                            
+
+                        case "copyBold1":
+
+                            copyToClipboardMsg(ct1, "msg");
+
+                        break;
+
+                        case "copyBold2":
+
+                            copyToClipboardMsg(ct2, "msg");
+
+                        break;
+						
+                        case "copyLine":
+
+                            copyToClipboardMsg(ct3, "msg");
+
+                        break;				
+
+                        case "copySplitter":
+
+                            copyToClipboardMsg(ct4, "msg");
+
+                        break;		
+									// game lobby links
+                        case "copysug":
+
+                            copyToClipboardMsg(cts1, "msg");
+
+                        break;			
+
+                        case "copysul":
+
+                            copyToClipboardMsg(cts2, "msg");
+
+                        break;	
+
+                        case "copynag":
+
+                            copyToClipboardMsg(ctn1, "msg");
+
+                        break;	
+
+                        case "copynal":
+
+                            copyToClipboardMsg(ctn2, "msg");
+
+                        break;		
+
+						case "copysag":	
+
+                            copyToClipboardMsg(ctv1, "msg");
+
+                        break;			
+
+                        case "copysal":
+
+                            copyToClipboardMsg(ctv2, "msg");
+
+                        break;	
+
+                        case "copydkg":
+
+                            copyToClipboardMsg(ctd1, "msg");
+
+                        break;	
+
+                        case "copydkl":
+
+                            copyToClipboardMsg(ctd2, "msg");
+
+                        break;							
+
+								// game lobby links end
+
+                        case "separator":
+
+                            var toBeCategorized = textAlue1.value;
+
+                            var splitted = toBeCategorized.split("xSPLITx");
+                            
+                            landingPage[activeSlot] = splitted[0];
+							termsAndConds[activeSlot] = splitted[1];
+                            titleAndMeta[activeSlot] = splitted[2];                      
+                            mainBanner[activeSlot] = splitted[3];
+                            promotionsPage[activeSlot] = splitted[4];
+                            emails[activeSlot] = splitted[5];
+                            oms[activeSlot] = splitted[6];
+                            campaignTool[activeSlot] = splitted[7];
+                            wikisson[activeSlot] = splitted[8];
+                            campaignBrief[activeSlot] = splitted[9];
+                            notesAndLinks[activeSlot] = splitted[10];    
+
+                            loadTexts(activeBank, activeSlot);                        
+
+                        break;
+						
+						case "importCampaign":
+						
+							let toBeImportet = textAlue2.value;
+							let unpackedValue = JSON.parse(toBeImportet);
+							
+							console.log("import:");
+							console.log("json value:",toBeImportet);
+							console.log("unpackedValue:",unpackedValue);
+							
+							landingPage = unpackedValue[0];
+							titleAndMeta = unpackedValue[1];
+							termsAndConds = unpackedValue[2];
+							emails = unpackedValue[3];
+							oms = unpackedValue[4];
+							mainBanner = unpackedValue[5];
+							promotionsPage = unpackedValue[6];
+							campaignTool = unpackedValue[7];
+							wikisson = unpackedValue[8];
+							campaignBrief = unpackedValue[9];
+							notesAndLinks = unpackedValue[10];
+							
+							/*
+												let allDetails = [   // collect all data
+					
+					landingPage,
+					titleAndMeta,
+					termsAndConds,
+					emails,
+					oms,
+					mainBanner,
+					promotionsPage,
+					campaignTool,
+					wikisson,
+					campaignBrief,
+					notesAndLinks
+					
+					];  */
+
+						break;	
+							
+                        default: console.log("no button id found");
+
+                    }  // switch
+
+                }  // time for some action
+
+// copy mechanism
+
+    function copyToClipboardMsg(elem, msgElem) {  // copy message
+        
+        var succeed = copyToClipboard(elem);
+        var msg;
+        
+        if (!succeed) {
+            msg = "Copy not supported or blocked.  Press Ctrl+c to copy."
+        } 
+
+        else {
+            msg = "Text copied to the clipboard."
+        }
+        
+        if (typeof msgElem === "string") {
+            msgElem = document.getElementById(msgElem);
+        
+        }
+        
+        msgElem.innerHTML = msg;
+        setTimeout(function() {
+        msgElem.innerHTML = "";
+        
+        }, 2000);
+
+    }  // end of copy message
+
+    function copyToClipboard(elem) {  // copy mechanism
+          
+		  console.log("copy to clip fires at elem:",elem)
+        // create hidden text element, if it doesn't already exist
+        var targetId = "_hiddenCopyText_";
+        var isInput = elem.tagName === "INPUT" || elem.tagName === "TEXTAREA";
+        var origSelectionStart, origSelectionEnd;
+        
+        if (isInput) {
+        
+            // can just use the original source element for the selection and copy
+            target = elem;
+            origSelectionStart = elem.selectionStart;
+            origSelectionEnd = elem.selectionEnd;
+        
+        } 
+
+        else {
+        
+            // must use a temporary form element for the selection and copy
+            target = document.getElementById(targetId);
+            if (!target) {
+                var target = document.createElement("textarea");
+                target.style.position = "absolute";
+                target.style.left = "-9999px";
+                target.style.top = "0";
+                target.id = targetId;
+                document.body.appendChild(target);
+            }
+        
+            target.textContent = elem.textContent;
+        
+        }
+        
+        // select the content
+        var currentFocus = document.activeElement;
+        
+        target.focus();
+        target.setSelectionRange(0, target.value.length);
+        
+        // copy the selection
+        var succeed;
+            try {
+                  succeed = document.execCommand("copy");
+        } 
+
+        catch(e) {
+        
+            succeed = false;
+        
+        }
+        
+        // restore original focus
+        
+        if (currentFocus && typeof currentFocus.focus === "function") {
+        
+            currentFocus.focus();
+        
+        }
+        
+        if (isInput) {
+        
+            // restore prior selection
+            elem.setSelectionRange(origSelectionStart, origSelectionEnd);
+        
+        } 
+
+        else {
+        
+            // clear temporary content
+        
+            target.textContent = "";
+        }
+        
+        return succeed;
+
+    } // end of copy mechanism
+
+                $(document).ready(function(){   // ---------- DOC IS READY TO USE -------------------
+                      
+                   // whatAct.textContent = "Choose from left, what you want to first add.";
+
+                    hideLanguages();
+
+                    $("#leftSide").hide();  // hide left side.
+                    /* autosave added so should not be needed
+                    $("#saveButton").hide();
+					*/
+                    $("#invis").hide();
+					
+					// add copy paste targets:
+					document.getElementById("ct1").textContent = "<b>";
+					document.getElementById("ct2").textContent = "</b>";
+					document.getElementById("ct3").textContent = "<br>";
+                    document.getElementById("ct4").textContent = "xSPLITx";
+					
+					document.getElementById("cts1").textContent = "https://www.suomiarvat.com/kolikkopelit/";
+					document.getElementById("cts2").textContent = "https://www.suomiarvat.com/kolikkopelit/game-name/";
+					
+					document.getElementById("ctn1").textContent = "https://www.norgesautomaten.com/spilleautomater/";
+					document.getElementById("ctn2").textContent = "https://www.norgesautomaten.com/spilleautomater/game-name/";
+					
+					document.getElementById("ctv1").textContent = "https://www.sverigeautomaten.com/videoslots/";
+					document.getElementById("ctv2").textContent = "https://www.sverigeautomaten.com/videoslots/game-name/";
+					
+					document.getElementById("ctd1").textContent = "https://www.casino.dk/casinospil/videospillemaskiner";
+					document.getElementById("ctd2").textContent = "https://www.casino.dk/videospillemaskiner/the-falcon-huntress";
+
+
+                        });      // _------------ DOC IS READY TO USE ENDS ----------------
+
+                    $(":button").click(function (event) {  // event listener for buttons.
+                        
+                        console.log("event listener for button activated");
+         
+                        timeForAction(this.id); // fires timeForAction with id of button clicked.
+
+                    });                    
+
+
+            </script>
+
+    </body>
+
+</html>
